@@ -1,0 +1,18 @@
+[2024-09-11T03:23:01.594+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-11T03:23:01.638+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_with_taskflow_api_v03.greet scheduled__2023-02-19T00:00:00+00:00 [queued]>
+[2024-09-11T03:23:01.661+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_with_taskflow_api_v03.greet scheduled__2023-02-19T00:00:00+00:00 [queued]>
+[2024-09-11T03:23:01.664+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 6
+[2024-09-11T03:23:01.770+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): greet> on 2023-02-19 00:00:00+00:00
+[2024-09-11T03:23:01.785+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=11554) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-09-11T03:23:01.787+0000] {standard_task_runner.py:72} INFO - Started process 11567 to run task
+[2024-09-11T03:23:01.786+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_with_taskflow_api_v03', 'greet', 'scheduled__2023-02-19T00:00:00+00:00', '--job-id', '13441', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_taskflow_api.py', '--cfg-path', '/tmp/tmptqvs2hxz']
+[2024-09-11T03:23:01.791+0000] {standard_task_runner.py:105} INFO - Job 13441: Subtask greet
+[2024-09-11T03:23:01.950+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_with_taskflow_api_v03.greet scheduled__2023-02-19T00:00:00+00:00 [running]> on host 5508ea9ebfaf
+[2024-09-11T03:23:02.232+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='coder2j' AIRFLOW_CTX_DAG_ID='dag_with_taskflow_api_v03' AIRFLOW_CTX_TASK_ID='greet' AIRFLOW_CTX_EXECUTION_DATE='2023-02-19T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-02-19T00:00:00+00:00'
+[2024-09-11T03:23:02.238+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-11T03:23:02.247+0000] {logging_mixin.py:190} INFO - Hello World!, MY name is  Jerryand i am 19 years old!
+[2024-09-11T03:23:02.250+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-09-11T03:23:02.273+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-11T03:23:02.274+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_with_taskflow_api_v03, task_id=greet, run_id=scheduled__2023-02-19T00:00:00+00:00, execution_date=20230219T000000, start_date=20240911T032301, end_date=20240911T032302
+[2024-09-11T03:23:02.329+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-11T03:23:02.361+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

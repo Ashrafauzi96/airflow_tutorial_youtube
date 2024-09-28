@@ -1,0 +1,21 @@
+[2024-09-27T01:49:04.208+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-27T01:49:04.227+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_with_postgres_hooks_v02.postgres_to_s3 scheduled__2024-09-25T00:00:00+00:00 [queued]>
+[2024-09-27T01:49:04.235+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_with_postgres_hooks_v02.postgres_to_s3 scheduled__2024-09-25T00:00:00+00:00 [queued]>
+[2024-09-27T01:49:04.236+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 6
+[2024-09-27T01:49:04.253+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): postgres_to_s3> on 2024-09-25 00:00:00+00:00
+[2024-09-27T01:49:04.260+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_with_postgres_hooks_v02', 'postgres_to_s3', 'scheduled__2024-09-25T00:00:00+00:00', '--job-id', '22771', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_postgres_hooks.py', '--cfg-path', '/tmp/tmpg96mhr1k']
+[2024-09-27T01:49:04.262+0000] {standard_task_runner.py:105} INFO - Job 22771: Subtask postgres_to_s3
+[2024-09-27T01:49:04.264+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=3303) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-09-27T01:49:04.265+0000] {standard_task_runner.py:72} INFO - Started process 3305 to run task
+[2024-09-27T01:49:04.308+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_with_postgres_hooks_v02.postgres_to_s3 scheduled__2024-09-25T00:00:00+00:00 [running]> on host ced43fa3e256
+[2024-09-27T01:49:04.394+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='coder2j' AIRFLOW_CTX_DAG_ID='dag_with_postgres_hooks_v02' AIRFLOW_CTX_TASK_ID='postgres_to_s3' AIRFLOW_CTX_EXECUTION_DATE='2024-09-25T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-25T00:00:00+00:00'
+[2024-09-27T01:49:04.395+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-27T01:49:04.411+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py:175 AirflowContextDeprecationWarning: Accessing 'next_ds_nodash' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds_nodash }}' instead.
+[2024-09-27T01:49:04.419+0000] {base.py:84} INFO - Retrieving connection 'postgres_localhost'
+[2024-09-27T01:49:04.435+0000] {dag_with_postgres_hooks.py:27} INFO - Saved orders data in text file: dags/get_orders_20240925.txt
+[2024-09-27T01:49:04.436+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-09-27T01:49:04.444+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-27T01:49:04.445+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_with_postgres_hooks_v02, task_id=postgres_to_s3, run_id=scheduled__2024-09-25T00:00:00+00:00, execution_date=20240925T000000, start_date=20240927T014904, end_date=20240927T014904
+[2024-09-27T01:49:04.480+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-27T01:49:04.494+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-27T01:49:04.498+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
